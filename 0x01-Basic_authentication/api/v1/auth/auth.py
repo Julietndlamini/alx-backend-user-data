@@ -11,9 +11,6 @@ from typing import List, TypeVar
 from flask import request
 
 
-
-
-
 class Auth:
 
     """Authentication class.
@@ -50,8 +47,6 @@ class Auth:
 
         return True
 
-
-
     def authorization_header(self, request=None) -> str:
 
         """Gets the authorization header field from the request.
@@ -63,8 +58,6 @@ class Auth:
             return request.headers.get('Authorization', None)
 
         return None
-
-
 
     def current_user(self, request=None) -> TypeVar('User'):
 

@@ -12,14 +12,9 @@ import binascii
 
 from typing import Tuple, TypeVar
 
-
-
 from .auth import Auth
 
 from models.user import User
-
-
-
 
 
 class BasicAuth(Auth):
@@ -52,8 +47,6 @@ class BasicAuth(Auth):
 
         return None
 
-
-
     def decode_base64_authorization_header(
 
             self,
@@ -83,8 +76,6 @@ class BasicAuth(Auth):
             except (binascii.Error, UnicodeDecodeError):
 
                 return None
-
-
 
     def extract_user_credentials(
 
@@ -122,8 +113,6 @@ class BasicAuth(Auth):
 
         return None, None
 
-
-
     def user_object_from_credentials(
 
             self,
@@ -155,8 +144,6 @@ class BasicAuth(Auth):
                 return users[0]
 
         return None
-
-
 
     def current_user(self, request=None) -> TypeVar('User'):
 
